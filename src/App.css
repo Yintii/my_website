@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+#intro{
+	display:flex;
+	flex-flow:row nowrap;
+	align-items:center;
+	justify-content:space-evenly;
+	padding: 5rem 0;
+	background-color: purple;
+	color: white;
+	overflow: hidden;
+}
+#intro p{
+	margin-top:-3rem;
+}
+#intro h1{
+	font-size: 85px;
+	line-height:5rem;
+	display:flex;
+	flex-flow:column nowrap;
+}
+#intro p{
+	animation: fadeIn 4s 1 forwards;
+}
+#kele, #heart{
+	display:flex;
+	flex-flow:row nowrap;
+}
+#kele{
+	position:relative;
+	left:0px;
+	animation: slideIn 2s 1 forwards;
+}
+#heart{
+	position:relative;
+	bottom:0px;
+	animation: slideUp 2s 1 forwards;
+}
+#intro img {
+	position:relative;
+	right:0px;
+	border-radius: 50px;
+	border: 2px solid white;
+	animation: rollIn 2s 1 forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes rollIn{
+	0%{
+		right:-500px;
+        transform: rotate(0deg);
+	}	
+	100%{
+		right: 0px;
+		transform: rotate(-360deg);
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes slideIn {
+	0%{
+		left:-500px;
+	}
+	100%{
+		left:0px;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes slideUp{
+	0%{
+		bottom:-500px;
+	}
+	100%{
+		bottom:0px;
+	}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes fadeIn {
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
 }
