@@ -1,84 +1,22 @@
-#intro{
-	display:flex;
-	flex-flow:row nowrap;
-	align-items:center;
-	justify-content:space-evenly;
-	padding: 5rem 0;
-	background-color: purple;
-	color: white;
-	overflow: hidden;
-}
-#intro p{
-	margin-top:-3rem;
-}
-#intro h1{
-	font-size: 85px;
-	line-height:5rem;
-	display:flex;
-	flex-flow:column nowrap;
-}
-#intro p{
-	animation: fadeIn 4s 1 forwards;
-}
-#kele, #heart{
-	display:flex;
-	flex-flow:row nowrap;
-}
-#kele{
-	position:relative;
-	left:0px;
-	animation: slideIn 2s 1 forwards;
-}
-#heart{
-	position:relative;
-	bottom:0px;
-	animation: slideUp 2s 1 forwards;
-}
-#intro img {
-	position:relative;
-	right:0px;
-	border-radius: 50px;
-	border: 2px solid white;
-	animation: rollIn 2s 1 forwards;
+.next-area-button{
+	position:absolute;
+	bottom: 10%;
+	right: 15%;
+	border:2px solid white;
+	border-radius:15px;
+	padding:0.5rem;
+	font-size:20px;
+	animation: pulse 5s infinite;
 }
 
-@keyframes rollIn{
-	0%{
-		right:-500px;
-        transform: rotate(0deg);
-	}	
-	100%{
-		right: 0px;
-		transform: rotate(-360deg);
-	}
-}
-
-@keyframes slideIn {
-	0%{
-		left:-500px;
-	}
-	100%{
-		left:0px;
-	}
-}
-
-@keyframes slideUp{
-	0%{
-		bottom:-500px;
-	}
-	100%{
-		bottom:0px;
-	}
-}
-
-@keyframes fadeIn {
+@keyframes pulse{
 	0%{
 		opacity:0;
 	}
 	50%{
-		opacity:0;
-	}
-	100%{
 		opacity:1;
 	}
+	100%{
+		opacity:0;	
+	}	
 }
