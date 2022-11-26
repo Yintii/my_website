@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../css/intro.css'
-import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap'
+
+
 function Intro() {
 
-	const navigate = useNavigate();
 	const [active, setActive] = useState(1);
 	const sectionRef = useRef(null);
-	
-
 
 	const handlePageChange = () => {
 		setActive(0);
