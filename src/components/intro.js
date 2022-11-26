@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import '../css/intro.css'
-
-
+import { useNavigate } from 'react-router-dom';
+import { gsap } from 'gsap'
 function Intro() {
 
+	const navigate = useNavigate();
+	const [active, setActive] = useState(1);
+	const sectionRef = useRef(null);
+	
+
+
+	const handlePageChange = () => {
+		setActive(0);
+	}		
+
+	useEffect(()=>{
+		gsap.to(sectionRef.current, {
+			duration: 1,
+			autoAlpha: active,
+			ease: 'none',
+			delay: 1
+		})
+	}, [active]);
+
   return (
-	<section>
+	<section ref={sectionRef}>
 		<div id="name-area">		
 			<h1>
 				<div id="kele">
@@ -30,7 +49,7 @@ function Intro() {
 			</div>
 		</div>		
 		<img src="#" width="400px" height="400px" />
-		<span className="next-area-button">About→</span>
+		<span className="next-area-button" onClick={()=>handlePageChange()}>About→</span>
 	</section>
   );
 }

@@ -14,7 +14,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+a{
+	text-decoration:none;
+	color:white;
+}
 
 .next-area-button{
 	position:absolute;
@@ -37,4 +40,11 @@ code {
 	100%{
 		opacity:0;	
 	}	
+}
+
+@media screen and (max-width:767px){
+	.next-area-button{
+		bottom: unset;
+		top: 10%;
+	}
 }

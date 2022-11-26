@@ -5,7 +5,7 @@ import '../css/intro.css'
 function Intro() {
 
   return (
-	<section>
+	<section className="intro-not-active">
 		<div id="name-area">		
 			<h1>
 				<div id="kele">
@@ -29,7 +29,7 @@ function Intro() {
 				<h5 className='wrapped-title'>Wordpress Developer/Manager</h5>
 			</div>
 		</div>		
-		<img src="#" width="400px" height="400px" />
+		<img src="#" />
 		<span className="next-area-button">About→</span>
 	</section>
   );
