@@ -14,3 +14,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.next-area-button{
+	position:absolute;
+	bottom: 10%;
+	right: 15%;
+	border:2px solid white;
+	border-radius:15px;
+	padding:0.5rem;
+	font-size:20px;
+	animation: pulse 5s infinite;
+}
+
+@keyframes pulse{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;	
+	}	
+}
