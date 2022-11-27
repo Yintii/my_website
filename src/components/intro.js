@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../css/intro.css'
 import { gsap } from 'gsap'
-
+import { useNavigate } from 'react-router-dom';
 
 function Intro() {
 
 	const [active, setActive] = useState(1);
 	const sectionRef = useRef(null);
 
+	const navigate = useNavigate();
+
 	const handlePageChange = () => {
 		setActive(0);
+		setTimeout(()=>{
+			navigate('/about');
+		}, 1500)
 	}		
 
 	useEffect(()=>{
@@ -17,12 +22,12 @@ function Intro() {
 			duration: 1,
 			autoAlpha: active,
 			ease: 'none',
-			delay: 1
+			delay: 0,
 		})
 	}, [active]);
 
   return (
-	<section ref={sectionRef}>
+	<section id="intro-section" ref={sectionRef}>
 		<div id="name-area">		
 			<h1>
 				<div id="kele">
