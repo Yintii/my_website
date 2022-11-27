@@ -5,17 +5,23 @@ import { useNavigate } from 'react-router-dom';
 
 function Intro() {
 
-	const [active, setActive] = useState(1);
 	const sectionRef = useRef(null);
-
 	const navigate = useNavigate();
+	const [active, setActive] = useState(0);
 
 	const handlePageChange = () => {
 		setActive(0);
 		setTimeout(()=>{
 			navigate('/about');
-		}, 1500)
-	}		
+		},1000)
+	}
+
+	
+	useEffect(()=>{
+		setTimeout(()=>{
+			setActive(1);
+		}, 300)
+	}, [])
 
 	useEffect(()=>{
 		gsap.to(sectionRef.current, {
@@ -25,9 +31,8 @@ function Intro() {
 			delay: 0,
 		})
 	}, [active]);
-
   return (
-	<section id="intro-section" ref={sectionRef}>
+	<section style={{opacity: 0}} id="intro-section" ref={sectionRef}>
 		<div id="name-area">		
 			<h1>
 				<div id="kele">

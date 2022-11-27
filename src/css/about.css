@@ -1,4 +1,39 @@
 #about-section{
-	background-color:orange;
-	z-index:-1;	
+	background-color:#663399;
+	z-index:-1;
+	color:white;
+}
+
+#wrapper{
+	width:70vw;
+	margin: 0 auto;
+}
+
+#about{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	animation: slideDown 2s 1;
+	position:relative;
+}
+p{
+	font-size:25px;
+	line-height: 2rem;
+	text-align:center;
+}
+ul{
+	line-height:1.4rem;
+	font-size:20px;
+}
+li{
+	margin:1.5rem 0;
+}
+
+@keyframes slideDown{
+	0%{
+		top:-200px;
+	}
+	100%{
+		top:0px;
+	}
 }

@@ -28,8 +28,8 @@ section{
 }
 .next-area-button{
 	position:absolute;
-	bottom: 10%;
-	right: 15%;
+	top:20px;
+	right: 20px;
 	border:2px solid white;
 	border-radius:15px;
 	padding:0.5rem;
